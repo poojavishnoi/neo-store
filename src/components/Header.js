@@ -1,12 +1,7 @@
 import "../style/header.css";
 import { Link } from "react-router-dom";
-// import {useCart} from '../contexts/cart-context'
-// import { useWishList } from "../contexts/wishlist-context";
 
 function Header() {
-
-  // const {state} = useCart();
-  // const {wishListState} = useWishList();
 
   return (
     <div className="navigation_main_container">
