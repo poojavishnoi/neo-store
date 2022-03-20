@@ -1,6 +1,12 @@
 @import url(https://use.fontawesome.com/releases/v5.0.0/css/all.css);
 @import url(https://neodev-ui.netlify.app/doc/docstyle.css);
 
+:root{
+  --heading-color: #bdbdbd;
+  --black-color: #000000;
+  --border-color: #d3d3d3;
+}
+
 .App {
   text-align: center;
   margin: 0 5%;

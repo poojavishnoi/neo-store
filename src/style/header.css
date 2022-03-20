@@ -7,12 +7,12 @@
   font-size: 2.5rem;
   font-weight: bolder;
   margin-left: 1rem;
-  color: white;
+  color: var(--body-color);
 }
 
 .nav_icon a,
 .brand_title a {
-  color: black;
+  color: var(--black-color);
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -29,7 +29,6 @@
   background-color: var(--primary-color);
   top: -0.7rem;
   left: 2rem;
-  /* width: 1.6rem; */
 }
 
 .fa {
