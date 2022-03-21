@@ -1,0 +1,156 @@
+.home_center_img {
+  width: 100%;
+  position: relative;
+}
+
+.primary_solid_btn {
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+
+.content {
+  position: absolute;
+  top: 10%;
+  left: 37%;
+  transform: translate(-50%, -50%);
+  font-size: 1.3rem;
+}
+
+.heading {
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.heading h2 {
+  margin: 4rem;
+  width: fit-content;
+  border-bottom: 5px solid var(--border-color);
+}
+
+.category_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.category_grid img {
+  object-fit: contain;
+  width: 90%;
+}
+
+.category {
+  position: relative;
+  transition: 0.1s ease-in-out;
+}
+.overlap {
+  position: absolute;
+  top: 5%;
+  left: 45%;
+  color: var(--body-color);
+}
+
+.splide-slide{
+  padding-left: 7rem;
+}
+
+.arrival_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.arrival_grid .item img {
+  border-radius: 2rem 0 0rem 0;
+
+}
+
+.item{
+  width: 20rem;
+  position: relative;
+}
+
+.item img{
+  width: 100%;
+}
+
+.item_desc {
+  text-align: start;
+}
+
+.item_desc_heading {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid lightgrey;
+}
+
+.category:hover,
+.item:hover {
+  transform: scale(1.1);
+  transition: 0.1s ease-in-out;
+}
+
+@media only screen and (max-width: 600px) {
+  .heading {
+    font-size: 0.8rem;
+  }
+
+  .heading h1 {
+    margin: 2rem;
+  }
+
+  .arrival_grid .item img {
+    width: 70%;
+    margin-left: 2.4rem;
+  }
+
+  .item_desc {
+    font-size: 0.8rem;
+    margin-left: 2.4rem;
+    text-align: start;
+    margin-bottom: 3rem;
+    width: 20rem;
+
+  }
+
+  .home_center_img{
+    width: 100%;
+  }
+
+  .overlap {
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 0.8rem;
+  }
+
+  .arrival_grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .category_grid img {
+    width: 80%;
+  }
+
+  .category_grid{
+    grid-template-columns: repeat(auto-fit);
+  }
+
+  .content {
+    top: 30%;
+    left: 37%;
+    font-size: 0.5rem;
+  }
+
+  .splide-slide{
+    padding-left: 0rem;
+  } 
+
+  .item_desc{
+    margin-left: 4rem;
+    width: 14.3rem;
+  }
+
+
+  .home_center_img .primary_solid_btn {
+    font-size: 0.6rem;
+    padding: 0.5rem;
+  }
+}
