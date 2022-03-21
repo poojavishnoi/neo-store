@@ -24,7 +24,6 @@ function Home() {
     }
   }
 
-  console.log(arrivalProducts);
 
   return (
     <div className="home_container">
