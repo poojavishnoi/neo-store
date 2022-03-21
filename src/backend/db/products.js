@@ -34,7 +34,7 @@ export const products = [
     "price": "600.0"
   },
   {
-    "_id": 4,
+    "_id": uuid(),
     "name": "product 4",
     "product": "Tshirt",
     "rating" : 5,
@@ -43,7 +43,7 @@ export const products = [
     "price": "700.0"
   },
   {
-    "_id": 5,
+    "_id":  uuid(),
     "name": "product 5",
     "product": "Tshirt",
     "rating" : 2,
@@ -52,7 +52,7 @@ export const products = [
     "price": "400.0"
   },
   {
-    "_id": 6,
+    "_id":  uuid(),
     "name": "product 6",
     "product": "Tshirt",
     "rating" : 4,
@@ -61,7 +61,7 @@ export const products = [
     "price": "500.0"
   },
   {
-    "_id": 7,
+    "_id":  uuid(),
     "name": "product 7",
     "product": "Tshirt",
     "rating" : 3,
@@ -70,7 +70,7 @@ export const products = [
     "price": "450.0"
   },
   {
-    "_id": 8,
+    "_id":  uuid(),
     "name": "product 8",
     "product": "Tshirt",
     "rating" : 5,
@@ -79,7 +79,7 @@ export const products = [
     "price": "800.0"
   },
   {
-    "_id": 9,
+    "_id":  uuid(),
     "name": "product 9",
     "product": "Tshirt",
     "rating" : 3,
@@ -88,7 +88,7 @@ export const products = [
     "price": "700.0"
   },
   {
-    "_id": 10,
+    "_id":  uuid(),
     "name": "product 10",
     "product": "Tshirt",
     "rating" : 5,
@@ -97,7 +97,7 @@ export const products = [
     "price": "550.0"
   },
   {
-    "_id": 11,
+    "_id":  uuid(),
     "name": "product 11",
     "product": "Tshirt",
     "rating" : 4,
