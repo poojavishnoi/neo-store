@@ -1,11 +1,30 @@
 
-import { products } from "../backend/db/products";
+// import { products } from "../backend/db/products";
 import { Link } from "react-router-dom";
 import "../style/home.css";
 import { SplideSlide, Splide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/themes/splide-skyblue.min.css";
+import { useEffect, useState } from "react";
 
 function Home() {
+
+  const [arrivalProducts, setArrivalProducts] = useState([])
+
+  useEffect(() => {
+    fetchProducts()
+  }, [])
+
+  const fetchProducts = async () => {
+    try {
+      const data = await fetch("http://localhost:3001/api/products")
+      const products = await data.json()
+      setArrivalProducts(products.products);
+    } catch (error) {
+      throw error
+    }
+  }
+
+  console.log(arrivalProducts);
 
   return (
     <div className="home_container">
@@ -63,9 +82,9 @@ function Home() {
             }
           }}
         >
-          {products.map((item) => {
+          {arrivalProducts.map((item) => {
             return (
-              <SplideSlide key={item.id}>
+              <SplideSlide key={item._id}>
                 <div className="item">
                     <img className="img_responsive" src={item.img} alt=""></img>
                   <div className="item_desc">
