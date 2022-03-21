@@ -1,9 +1,9 @@
 .navigation_main_container {
-  border: none !important;
+  border: none;
 }
 
 .brand_title {
-  display: block !important;
+  display: block;
   font-size: 2.5rem;
   font-weight: bolder;
   margin-left: 1rem;
