@@ -10,7 +10,7 @@ function Home() {
   return (
     <div className="home_container">
       <div className="home_center_img">
-        <img className="img_responsive" src={"https://images.pexels.com/photos/6348047/pexels-photo-6348047.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"} alt="" />
+        <img className="img_responsive" src="https://images.pexels.com/photos/6348047/pexels-photo-6348047.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" />
         <div className="content">
           <h1>NeoDev Store</h1>
           <h6>Upto 40% off on all products</h6>
@@ -26,19 +26,19 @@ function Home() {
       <div className="category_grid">
         <div className="category">
           <Link to="/productlist/dress">
-            <img className="img_responsive" src={"https://images.pexels.com/photos/7506739/pexels-photo-7506739.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"} alt=""></img>
+            <img className="img_responsive" src="https://images.pexels.com/photos/7506739/pexels-photo-7506739.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt=""></img>
             <h2 className="overlap">Dress</h2>
           </Link>
         </div>
         <div className="category">
           <Link to="/productlist/tshirt">
-            <img className="img_responsive" src={"https://images.pexels.com/photos/6776724/pexels-photo-6776724.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"} alt=""></img>
+            <img className="img_responsive" src="https://images.pexels.com/photos/6776724/pexels-photo-6776724.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt=""></img>
             <h2 className="overlap">Tshirt</h2>
           </Link>
         </div>
         <div className="category">
           <Link to="/productlist/shirt">
-            <img className="img_responsive" src={"https://images.pexels.com/photos/5145180/pexels-photo-5145180.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"} alt=""></img>
+            <img className="img_responsive" src="https://images.pexels.com/photos/5145180/pexels-photo-5145180.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt=""></img>
             <h2 className="overlap">Shirt</h2>
           </Link>
         </div>
