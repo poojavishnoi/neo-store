@@ -56,6 +56,11 @@ function Home() {
             autoplay: true,
             rewind: true,
             pagination: false,
+            breakpoints:{
+              700: {
+                destroy:true
+              }
+            }
           }}
         >
           {products.map((item) => {

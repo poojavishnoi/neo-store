@@ -107,6 +107,12 @@
     margin-left: 2.4rem;
     text-align: start;
     margin-bottom: 3rem;
+    width: 20rem;
+
+  }
+
+  .home_center_img{
+    width: 100%;
   }
 
   .overlap {
@@ -120,8 +126,7 @@
   }
 
   .category_grid img {
-    height: 17rem;
-    width: 10rem;
+    width: 80%;
   }
 
   .category_grid{
@@ -133,6 +138,16 @@
     left: 37%;
     font-size: 0.5rem;
   }
+
+  .splide-slide{
+    padding-left: 0rem;
+  } 
+
+  .item_desc{
+    margin-left: 4rem;
+    width: 14.3rem;
+  }
+
 
   .home_center_img .primary_solid_btn {
     font-size: 0.6rem;
