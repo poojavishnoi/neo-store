@@ -29,7 +29,7 @@ function Home() {
         <div className="content">
           <h1>NeoDev Store</h1>
           <h6>Upto 40% off on all products</h6>
-          <Link to={"productlist/all"}>
+          <Link to="/productlist/all">
             <button className="primary_solid_btn btn">Shop Now</button>
           </Link>
         </div>

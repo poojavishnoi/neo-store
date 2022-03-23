@@ -23,7 +23,8 @@ function Productlist() {
 
   const getProductList = async(name) => {
 
-    const data = await fetch('api/products');
+    try{
+    const data = await fetch("/api/products");
     const result = await data.json();
 
       switch(name){
@@ -44,6 +45,9 @@ function Productlist() {
         default:
           return setProductList(result.products)
         }
+      }catch(e){
+        console.log(e.message);
+      }
   }
 
   useEffect(()=>{
