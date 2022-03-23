@@ -14,22 +14,13 @@ function Home() {
 
   const fetchProducts = async () => {
     try {
-      const data = await fetch("http://localhost:3000/api/products")
+      const data = await fetch("api/products")
       const products = await data.json()
       setArrivalProducts(products.products);
     } catch (error) {
       throw error
     }
   }  
-
-  // const getTshirtProduct = () => {
-  //   const tshirtProducts =  [...arrivalProducts.filter((product) => {
-  //     return product.product.toLowerCase() === "tshirt"
-  //   })]
-
-  //   return tshirtProducts
-  // }
-
 
   return (
     <div className="home_container">

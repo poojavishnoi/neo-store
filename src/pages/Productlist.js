@@ -23,7 +23,7 @@ function Productlist() {
 
   const getProductList = async(name) => {
 
-    const data = await fetch(`http://localhost:3000/api/products`);
+    const data = await fetch('api/products');
     const result = await data.json();
 
       switch(name){
