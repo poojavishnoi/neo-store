@@ -1,4 +1,3 @@
-import React from 'react'
 
 function getSortedProduct(productList, sortBy) {
     if (sortBy && sortBy === "HIGH_TO_LOW") {

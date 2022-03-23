@@ -24,23 +24,25 @@ function Productlist() {
   const getProductList = async(name) => {
 
     const data = await fetch(`http://localhost:3000/api/products`);
-    const products = await data.json();
+    const result = await data.json();
 
       switch(name){
         case "all": 
-          return setProductList(products.products);
+          return setProductList(result.products);
         case "tshirt": 
-          return setProductList(products.products.filter((item) => {
+          return setProductList(result.products.filter((item) => {
             return item.product.toLowerCase() === "tshirt"
           }));
         case "dress":
-          return setProductList(products.products.filter((item) => {
+          return setProductList(result.products.filter((item) => {
             return item.product.toLowerCase() === "dress"
           }));
         case "shirt":
-          return setProductList(products.products.filter((item) => {
+          return setProductList(result.products.filter((item) => {
             return item.product.toLowerCase() === "shirt"
           }));
+        default:
+          return setProductList(result.products)
         }
   }
 

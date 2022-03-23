@@ -16,7 +16,7 @@ const FilterContextProvider = ({children}) => {
       let filterList = [...state.product]
       const isPresent = filterList.indexOf(action.payload);
 
-      if (isPresent == -1) {
+      if (isPresent === -1) {
         // add action.payload into filterList
         filterList.push(action.payload)
       } else {
