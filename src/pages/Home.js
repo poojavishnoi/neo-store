@@ -3,7 +3,6 @@ import "../style/home.css";
 import { SplideSlide, Splide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/themes/splide-skyblue.min.css";
 import { useEffect, useState } from "react";
-import {products} from '../backend/db/products'
 
 function Home() {
 
