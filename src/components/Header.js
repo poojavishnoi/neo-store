@@ -1,7 +1,13 @@
 import "../style/header.css";
 import { Link } from "react-router-dom";
+import { useFilter } from "../context/filter-context";
+import { useState } from "react";
 
 function Header() {
+
+  const {filterDispatch} = useFilter();
+  const [query, setQuery] = useState("");
+
 
   return (
     <div className="navigation_main_container">
@@ -22,9 +28,9 @@ function Header() {
       <div className="nav_section">
         <div className="nav_searchbar">
           <span>
-            <i className="fa fa-search fa"></i>
+            <i className="fa fa-search fa" onClick={() => filterDispatch({type: "SEARCH", payload: query})}></i>
           </span>
-          <input type="text" placeholder="Type to search" />
+          <input type="text" placeholder="Type to search" onChange={(e) => setQuery(e.target.value)}/>
         </div>
         <div className="nav_icons_container ">
           <div className="nav_icon profile_icon ">
