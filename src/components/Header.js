@@ -27,10 +27,15 @@ function Header() {
 
       <div className="nav_section">
         <div className="nav_searchbar">
+       
           <span>
+          <Link to="/productlist/all">
             <i className="fa fa-search fa" onClick={() => filterDispatch({type: "SEARCH", payload: query})}></i>
+        </Link>
+
           </span>
           <input type="text" placeholder="Type to search" onChange={(e) => setQuery(e.target.value)}/>
+
         </div>
         <div className="nav_icons_container ">
           <div className="nav_icon profile_icon ">
