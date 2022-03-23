@@ -1,10 +1,9 @@
-
-// import { products } from "../backend/db/products";
 import { Link } from "react-router-dom";
 import "../style/home.css";
 import { SplideSlide, Splide } from "@splidejs/react-splide";
 import "@splidejs/splide/dist/css/themes/splide-skyblue.min.css";
 import { useEffect, useState } from "react";
+import {products} from '../backend/db/products'
 
 function Home() {
 
@@ -16,13 +15,21 @@ function Home() {
 
   const fetchProducts = async () => {
     try {
-      const data = await fetch("http://localhost:3001/api/products")
+      const data = await fetch("http://localhost:3000/api/products")
       const products = await data.json()
       setArrivalProducts(products.products);
     } catch (error) {
       throw error
     }
-  }
+  }  
+
+  // const getTshirtProduct = () => {
+  //   const tshirtProducts =  [...arrivalProducts.filter((product) => {
+  //     return product.product.toLowerCase() === "tshirt"
+  //   })]
+
+  //   return tshirtProducts
+  // }
 
 
   return (
@@ -81,7 +88,7 @@ function Home() {
             }
           }}
         >
-          {arrivalProducts.map((item) => {
+          {arrivalProducts.slice(0,10).map((item) => {
             return (
               <SplideSlide key={item._id}>
                 <div className="item">
