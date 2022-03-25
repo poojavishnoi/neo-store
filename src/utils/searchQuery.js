@@ -1,4 +1,4 @@
-function searchQuery(productList, query) {
+export default function searchQueryFunction(productList, query) {
 
   if(!query){
     return productList
@@ -9,4 +9,3 @@ function searchQuery(productList, query) {
 
 }
 
-export default searchQuery
