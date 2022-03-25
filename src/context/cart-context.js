@@ -9,11 +9,12 @@ const CartContextProvider = ({ children }) => {
       case "ADD_TO_CART":
         let index = state.cart.findIndex((ele) => ele.id === action.payload.id)
         if(index === -1)
-        return {
-          ...state,
-          itemCount: state.itemCount + 1,
-          cart: index === -1 ? [ ...state.cart, {...action.payload}] : [...state.cart]
-        };
+          return {
+            ...state,
+            itemCount: state.itemCount + 1,
+            cart: index === -1 ? [ ...state.cart, {...action.payload}] : [...state.cart]
+          };
+        break;
 
       case "QUANTITY_INCREMENT":
         return {
