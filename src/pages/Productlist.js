@@ -46,7 +46,7 @@ function Productlist() {
         <div className="product_container">
           {finalProductList.map((product)=>{
             return (
-            <Product rating={product.rating} data={productList} name={product.name} key={product.id} img={product.img} id={product.id} price={product.price} type={product.product}/>
+            <Product rating={product.rating} data={product} name={product.name} key={product.id} img={product.img} id={product.id} price={product.price} type={product.product}/>
             )
           }
           )}
