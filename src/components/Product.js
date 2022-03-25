@@ -1,8 +1,12 @@
 import React from "react";
 import Rating from "./Rating";
 import "../style/product.css";
+import {useCart} from '../context/cart-context'
 
-function Product({img, name, type, rating, price}) {
+function Product({img, name, type, rating, price, data}) {
+
+  const { dispatch } = useCart();
+
   return (
     <div className="product_item">
       <img className="img_responsive" src={img} alt=""></img>
@@ -17,7 +21,14 @@ function Product({img, name, type, rating, price}) {
       </div>
 
       <div>
-        <button className="btn wishlist_btn primary_solid_btn" type="submit">
+        <button className="btn wishlist_btn primary_solid_btn" type="submit" 
+        onClick={() => {
+            dispatch({
+              type: "ADD_TO_CART",
+              totalPrice: price,
+              payload: data,
+            });
+          }}>
           Add to cart
         </button>
 
