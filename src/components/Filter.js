@@ -5,18 +5,18 @@ import Rating from "./Rating";
 
 function Filter() {
   const [rate, setRate] = useState(3);
-  const { filterState, filterDispatch } = useFilter();
+  const { filterState : {sortBy, price,product}, filterDispatch } = useFilter();
   return (
     <div className="filter_Section">
       <h2>Filters</h2>
 
       <div className="filter">
-        <h3>Price: {filterState.price}</h3>
+        <h3>Price: {price}</h3>
         <input
           type="range"
           min="400"
           max="2000"
-          value={filterState.price}
+          value={price}
           className="slider"
           step="100"
           onChange={(e) =>
@@ -30,7 +30,7 @@ function Filter() {
         <input
           type="checkbox"
           id="tshirt"
-          checked={filterState.product.indexOf("Tshirt") > -1}
+          checked={product.indexOf("Tshirt") > -1}
           onChange={() =>
             filterDispatch({ type: "CATEGORY", payload: "Tshirt" })
           }
@@ -40,7 +40,7 @@ function Filter() {
         <input
           type="checkbox"
           id="shirt"
-          checked={filterState.product.indexOf("Shirt") > -1}
+          checked={product.indexOf("Shirt") > -1}
           onChange={() =>
             filterDispatch({ type: "CATEGORY", payload: "Shirt" })
           }
@@ -50,7 +50,7 @@ function Filter() {
         <input
           type="checkbox"
           id="dress"
-          checked={filterState.product.indexOf("Dress") > -1}
+          checked={product.indexOf("Dress") > -1}
           onChange={() =>
             filterDispatch({ type: "CATEGORY", payload: "Dress" })
           }
@@ -74,7 +74,7 @@ function Filter() {
         <input
           type="radio"
           name="sort"
-          checked={filterState.sortBy && filterState.sortBy === "LOW_TO_HIGH"}
+          checked={sortBy && sortBy === "LOW_TO_HIGH"}
           onChange={() =>
             filterDispatch({ type: "SORT", payload: "LOW_TO_HIGH" })
           }
@@ -84,7 +84,7 @@ function Filter() {
         <input
           type="radio"
           name="sort"
-          checked={filterState.sortBy && filterState.sortBy === "HIGH_TO_LOW"}
+          checked={sortBy && sortBy === "HIGH_TO_LOW"}
           onChange={() =>
             filterDispatch({ type: "SORT", payload: "HIGH_TO_LOW" })
           }
