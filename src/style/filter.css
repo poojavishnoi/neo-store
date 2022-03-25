@@ -1,0 +1,17 @@
+
+.filter_Section{
+  padding: 2rem;
+  min-width: 20%;
+}
+
+.filter_Section input[type = radio], .filter_Section input[type = checkbox]{
+  margin-right: 0.4rem;
+}
+
+.filter_Section span{
+  font-size: 1.2rem;
+}
+
+.filter{
+  margin: 0.8rem 0;
+}

@@ -1,5 +1,3 @@
-
-// import { products } from "../backend/db/products";
 import { Link } from "react-router-dom";
 import "../style/home.css";
 import { SplideSlide, Splide } from "@splidejs/react-splide";
@@ -16,14 +14,13 @@ function Home() {
 
   const fetchProducts = async () => {
     try {
-      const data = await fetch("http://localhost:3001/api/products")
+      const data = await fetch("api/products")
       const products = await data.json()
       setArrivalProducts(products.products);
     } catch (error) {
       throw error
     }
-  }
-
+  }  
 
   return (
     <div className="home_container">
@@ -32,7 +29,7 @@ function Home() {
         <div className="content">
           <h1>NeoDev Store</h1>
           <h6>Upto 40% off on all products</h6>
-          <Link to={"productlist/all"}>
+          <Link to="/productlist/all">
             <button className="primary_solid_btn btn">Shop Now</button>
           </Link>
         </div>
@@ -81,7 +78,7 @@ function Home() {
             }
           }}
         >
-          {arrivalProducts.map((item) => {
+          {arrivalProducts.slice(0,10).map((item) => {
             return (
               <SplideSlide key={item._id}>
                 <div className="item">
