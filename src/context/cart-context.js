@@ -14,7 +14,6 @@ const CartContextProvider = ({ children }) => {
             itemCount: state.itemCount + 1,
             cart: index === -1 ? [ ...state.cart, {...action.payload}] : [...state.cart]
           };
-        break;
 
       case "QUANTITY_INCREMENT":
         return {
