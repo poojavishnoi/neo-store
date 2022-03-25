@@ -11,6 +11,7 @@ export const products = [
     "name": "product 1",
     "product": "Tshirt",
     "rating" : 4,
+    "quantity" : 1,
     "img":
       "https://images.pexels.com/photos/10049570/pexels-photo-10049570.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     "price": "500.0"
@@ -20,6 +21,7 @@ export const products = [
     "name": "product 2",
     "product": "Tshirt",
     "rating" : 2,
+    "quantity" : 1,
     "img":
       "https://images.pexels.com/photos/5705080/pexels-photo-5705080.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     "price": "400.0"
@@ -29,6 +31,7 @@ export const products = [
     "name": "product 3",
     "product": "Tshirt",
     "rating" : 3,
+    "quantity" : 1,
     "img":
       "https://images.pexels.com/photos/6354246/pexels-photo-6354246.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
     "price": "600.0"
