@@ -5,7 +5,7 @@ import { useState } from "react";
 import { useCart } from "../context/cart-context";
 
 function Header() {
-  const {state: {itemCount}} = useCart();
+  const {itemCount} = useCart();
   const {filterDispatch} = useFilter();
   const [query, setQuery] = useState("");
 

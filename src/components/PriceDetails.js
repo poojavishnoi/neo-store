@@ -10,7 +10,7 @@ function PriceDetails() {
     return productPrice - discount + delivery;
   }
 
-  const {state: {cart}} = useCart();
+  const {cart} = useCart();
   return (
     <div className="price_details_container">
           <h2>PRICE DETAILS</h2>

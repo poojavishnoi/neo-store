@@ -5,7 +5,7 @@ import PriceDetails from "../components/PriceDetails";
 
 function Cart() {
   const {
-    state:{cart}
+    cart
   } = useCart();
   return (
     <>

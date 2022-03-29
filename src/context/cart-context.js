@@ -3,23 +3,24 @@ import { createContext, useReducer, useContext } from "react";
 const cartContext = createContext(null);
 
 const CartContextProvider = ({ children }) => {
-  const reducerFunction = (state, action) => {
+  const reducerFunction = (state, {type, payload}) => {
 
-    switch (action.type) {
+    switch (type) {
       case "ADD_TO_CART":
-        let index = state.cart.findIndex((ele) => ele.id === action.payload.id)
-        if(index === -1)
+        let index = state.cart.findIndex((ele) => ele.id === payload.id)
+        if(index === -1){
           return {
             ...state,
             itemCount: state.itemCount + 1,
-            cart: index === -1 ? [ ...state.cart, {...action.payload}] : [...state.cart]
+            cart: index === -1 ? [ ...state.cart, {...payload}] : [...state.cart]
           };
+        }
 
       case "QUANTITY_INCREMENT":
         return {
           ...state,
           cart: state.cart.map((item) =>
-          item._id === action.payload._id
+          item._id === payload._id
             ? { ...item, quantity: item.quantity + 1 }
             : item
           ),
@@ -29,7 +30,7 @@ const CartContextProvider = ({ children }) => {
           return {
             ...state,
             cart: state.cart.map((item) =>
-            item._id === action.payload._id
+            item._id === payload._id
               ? { ...item, quantity: item.quantity - 1 }
               : item
             ),
@@ -38,7 +39,7 @@ const CartContextProvider = ({ children }) => {
       case "REMOVE_FROM_CART":
         return {
           ...state,
-          cart: state.cart.filter((c) => c._id !== action.payload._id),
+          cart: state.cart.filter((c) => c._id !== payload._id),
           itemCount: state.itemCount - 1,
 
         };
@@ -50,13 +51,13 @@ const CartContextProvider = ({ children }) => {
 
   };
 
-  const [state, dispatch] = useReducer(reducerFunction, {
+  const [{cart,itemCount}, dispatch] = useReducer(reducerFunction, {
     cart: [],
     itemCount: 0,
   });
 
   return (
-    <cartContext.Provider value={{ state, dispatch }}>
+    <cartContext.Provider value={{ cart, itemCount, dispatch }}>
       {children}
     </cartContext.Provider>
   );
