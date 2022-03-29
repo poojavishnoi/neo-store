@@ -4,7 +4,7 @@
 }
 
 .price_details_container{
-  background-color: rgb(246, 240, 253);
+  background-color: var(--price-detail-bg);
   padding: 2rem 2rem;
   width: 30rem;
   height: fit-content;
@@ -21,7 +21,7 @@
 .price_details_container h2{
   padding: 1rem 0;
   margin: 0.5rem 0;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid var(--gray-color);
 }
 
 .price_details_container p, h3{

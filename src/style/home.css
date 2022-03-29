@@ -79,7 +79,7 @@
 
 .item_desc_heading {
   margin-bottom: 1rem;
-  border-bottom: 1px solid lightgrey;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .category:hover,
