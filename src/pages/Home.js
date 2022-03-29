@@ -25,7 +25,7 @@ function Home() {
   return (
     <div className="home_container">
       <div className="home_center_img">
-        <img className="img_responsive" src="https://images.pexels.com/photos/6348047/pexels-photo-6348047.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" />
+        <img className="home_center_img" src="https://images.pexels.com/photos/6348047/pexels-photo-6348047.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" alt="" />
         <div className="content">
           <h1>NeoDev Store</h1>
           <h6>Upto 40% off on all products</h6>
