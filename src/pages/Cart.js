@@ -16,14 +16,7 @@ function Cart() {
 
           {cart.map((cartItem) => (            
             <CartProduct
-              name={cartItem.name}
-              img={cartItem.img}
               data={cartItem}
-              price={cartItem.price}
-              type={cartItem.type}
-              key={cartItem._id}
-              _id={cartItem._id}
-              qty={cartItem.quantity}
             />
 
           ))}
