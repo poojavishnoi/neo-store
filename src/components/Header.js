@@ -2,12 +2,12 @@ import "../style/header.css";
 import { Link } from "react-router-dom";
 import { useFilter } from "../context/filter-context";
 import { useState } from "react";
+import { useCart } from "../context/cart-context";
 
 function Header() {
-
+  const {itemCount} = useCart();
   const {filterDispatch} = useFilter();
   const [query, setQuery] = useState("");
-
 
   return (
     <div className="navigation_main_container">
@@ -52,7 +52,7 @@ function Header() {
             <Link className="nav_icon badge" to="/cart">
               <span>
                 <i className="cart_icon fas fa-shopping-cart fa"></i>
-                <span className="icon_badge">0</span>
+                <span className="icon_badge">{itemCount}</span>
 
               </span>
 

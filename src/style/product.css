@@ -23,7 +23,7 @@
 .like_icon{
   position: absolute;
   top: 3%;
-  background-color: lightgrey;
+  background-color: var(--border-color);
   right: 17%;
   border-radius: 50%;
   color: var(--primary-color);
