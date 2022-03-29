@@ -1,6 +1,6 @@
 import "./App.css";
 import { Route, Routes } from "react-router-dom";
-import {Home, Header, Footer, Productlist, Cart, Wishlist} from "./components/index.js"
+import {Home, Header, Footer, Productlist, Cart, Wishlist} from "./components"
 
 function App() {
   return (
