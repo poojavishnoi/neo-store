@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 import { useFilter } from "../context/filter-context";
 import { useState } from "react";
 import { useCart } from "../context/cart-context";
+import { useWishList } from "../context/wishlist-context";
 
 function Header() {
   const {itemCount} = useCart();
+  const { wishlistCount} = useWishList();
   const {filterDispatch} = useFilter();
   const [query, setQuery] = useState("");
 
@@ -63,7 +65,7 @@ function Header() {
             <Link className="nav_icon badge" to="/wishlist">
               <span>
                 <i className=" wishlist_icon fas fa-heart fa"></i>
-                <span className="icon_badge">0</span>
+                <span className="icon_badge">{wishlistCount}</span>
               </span>
 
               <span className="nav_icon_name">Wishlist</span>

@@ -1,9 +1,11 @@
 import "../style/cartproduct.css";
 import { Link } from "react-router-dom";
 import { useCart } from "../context/cart-context";
+import { useWishList } from "../context/wishlist-context";
 
 function CartProduct({ data }) {
   const { dispatch } = useCart();
+  const { wishListDispatch } = useWishList();
   return (
     <>
       <div className="cart_item">
@@ -20,7 +22,7 @@ function CartProduct({ data }) {
               onClick={() =>
                 dispatch({
                   type: "QUANTITY_DECREMENT",
-                  payload: data
+                  payload: data,
                 })
               }
             >
@@ -32,7 +34,7 @@ function CartProduct({ data }) {
               onClick={() =>
                 dispatch({
                   type: "QUANTITY_INCREMENT",
-                  payload: data
+                  payload: data,
                 })
               }
             >
@@ -47,7 +49,7 @@ function CartProduct({ data }) {
             onClick={() =>
               dispatch({
                 type: "REMOVE_FROM_CART",
-                payload: data
+                payload: data,
               })
             }
           >
@@ -55,7 +57,11 @@ function CartProduct({ data }) {
           </button>
           <button
             className="btn cart_btn secondary_solid_btn"
-            type="submit" 
+            type="submit"
+            onClick={() => {
+              dispatch({ type: "REMOVE_FROM_CART", payload: data });
+              wishListDispatch({ type: "ADD_TO_WISHLIST", payload: data });
+            }}
           >
             Move to wishlist
           </button>
